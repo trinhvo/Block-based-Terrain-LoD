@@ -19,8 +19,31 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="libs/libglew32.a" />
+					<Add library="libs/libglfw3.a" />
+					<Add library="libs/glfw3dll.a" />
 					<Add library="libs/libopengl32.a" />
 					<Add library="libs/libgdi32.a" />
+				</Linker>
+			</Target>
+			<Target title="Release Unix">
+				<Option platforms="Unix;" />
+				<Option output="bin/BBTLoD" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="bin/obj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c11" />
+					<Add option="-static" />
+					<Add option="-static-libgcc" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="glfw" />
+					<Add library="GL" />
+					<Add library="GLEW" />
 				</Linker>
 			</Target>
 		</Build>
@@ -30,9 +53,6 @@
 			<Add directory="include" />
 		</Compiler>
 		<Linker>
-			<Add library="libs/libglew32.a" />
-			<Add library="libs/libglfw3.a" />
-			<Add library="libs/glfw3dll.a" />
 		</Linker>
 		<Unit filename="Common/Data.cpp" />
 		<Unit filename="Common/Data.h" />

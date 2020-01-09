@@ -1,5 +1,5 @@
 #include "Mouse.h"
-#include "..\Game.h"
+#include "../Game.h"
 
 namespace Input {
 
