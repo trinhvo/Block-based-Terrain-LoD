@@ -19,8 +19,8 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="D:\Programy\CodeBlocks\MinGW\lib\libopengl32.a" />
-					<Add library="D:\Programy\CodeBlocks\MinGW\lib\libgdi32.a" />
+					<Add library="libs/libopengl32.a" />
+					<Add library="libs/libgdi32.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -30,9 +30,9 @@
 			<Add directory="include" />
 		</Compiler>
 		<Linker>
-			<Add library="libs\libglew32.a" />
-			<Add library="libs\libglfw3.a" />
-			<Add library="libs\glfw3dll.a" />
+			<Add library="libs/libglew32.a" />
+			<Add library="libs/libglfw3.a" />
+			<Add library="libs/glfw3dll.a" />
 		</Linker>
 		<Unit filename="Common/Data.cpp" />
 		<Unit filename="Common/Data.h" />

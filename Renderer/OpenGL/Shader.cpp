@@ -108,7 +108,7 @@ namespace OpenGL {
         glGetProgramInfoLog(programID, infoLen, NULL, &programErrorMsg[0]);
 
         if(result != GL_TRUE)
-            std::cerr << name << ": " << &programErrorMsg[0] << std::cerr;
+            std::cerr << name << ": " << &programErrorMsg[0] << std::endl;
 
         return (result == GL_TRUE);
     }
