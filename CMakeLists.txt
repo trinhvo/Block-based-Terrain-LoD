@@ -29,21 +29,23 @@ if(WIN32)
   set(LIBS mingw32 glfw glew32 opengl32 gdi32)
 
 else(WIN32)
-  set(CMAKE_MODULE_PATH /usr/local/lib/cmake /usr/local/lib/x86_64-linux-gnu/cmake)
-  set(CMAKE_PREFIX_PATH /usr/local/lib/cmake/glfw)
+  # set(CMAKE_MODULE_PATH /usr/local/lib/cmake /usr/local/lib/x86_64-linux-gnu/cmake)
+  # set(CMAKE_PREFIX_PATH /usr/local/lib/cmake/glfw)
 
   find_package(PkgConfig REQUIRED)
   find_package(GLFW3 REQUIRED)
   find_package(GLEW REQUIRED STATIC)
-  find_package(GLUT REQUIRED STATIC)
+  # find_package(GLUT REQUIRED STATIC)
   find_package(Freetype REQUIRED)
   find_package(jpeg REQUIRED)
   find_package(png REQUIRED)
 
   # pkg_search_module(GLFW REQUIRED glfw3)
-  include_directories(${GLFW_INCLUDE_DIRS}
+  include_directories(
+    ${OPENGL_INCLUDE_DIR}
+    ${GLFW_INCLUDE_DIRS}
     ${GLEW_INCLUDE_DIRS}
-    ${GLUT_INCLUDE_DIR}
+    # ${GLUT_INCLUDE_DIR}
     ${FREETYPE_INCLUDE_DIRS}
     ${JPEG_INCLUDE_DIR}
     ${PNG_INCLUDE_DIRS}
@@ -56,10 +58,7 @@ if(APPLE)
 
   include_directories(
     /usr/local/include
-    /usr/local/include/freetype2
-    ${OPENGL_INCLUDE_DIR}
     include
-    # /System/Library/Frameworks
   )
 
   link_directories(/usr/local/lib/ /opt/local/lib)
@@ -68,11 +67,11 @@ if(APPLE)
   find_library(IOKIT_LIBRARY IOKit REQUIRED)
   find_library(COREVID_LIBRARY CoreVideo REQUIRED)
 
-  MARK_AS_ADVANCED(COCOA_LIBRARY ${OPENGL_LIBRARIES})
+  MARK_AS_ADVANCED(COCOA_LIBRARY OPENGL_LIBRARIES)
 
   set(LIBS  glfw
             ${OPENGL_LIBRARIES}
-            ${GLUT_LIBRARIES}
+            # ${GLUT_LIBRARIES}
             glew
             ${COCOA_LIBRARY}
             ${COREVID_LIBRARY}
@@ -87,12 +86,12 @@ elseif(UNIX AND NOT APPLE)
 
   set(LIBS  ${GLFW_LIBRARIES}
             ${OPENGL_LIBRARIES}
-            ${GLUT_LIBRARIES}
+            # ${GLUT_LIBRARIES}
             ${GLEW_LIBRARIES}
             ${FREETYPE_LIBRARIES}
             ${JPEG_LIBRARIES}
             ${PNG_LIBRARIES}
-            X11 Xxf86vm pthread Xrandr Xinerama Xi Xcursor dl)
+            X11 Xxf86vm pthread Xrandr Xinerama Xi Xcursor)
 else()
   set(LIBS )
 endif(APPLE)

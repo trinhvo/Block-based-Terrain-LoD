@@ -54,36 +54,36 @@
 		</Compiler>
 		<Linker>
 		</Linker>
-		<Unit filename="Common/Data.cpp" />
-		<Unit filename="Common/Data.h" />
-		<Unit filename="Common/File.cpp" />
-		<Unit filename="Common/File.h" />
-		<Unit filename="GUI/Window.cpp" />
-		<Unit filename="GUI/Window.h" />
-		<Unit filename="Game.cpp" />
-		<Unit filename="Game.h" />
-		<Unit filename="Input/InputManager.cpp" />
-		<Unit filename="Input/InputManager.h" />
-		<Unit filename="Input/Keyboard.cpp" />
-		<Unit filename="Input/Keyboard.h" />
-		<Unit filename="Input/Mouse.cpp" />
-		<Unit filename="Input/Mouse.h" />
-		<Unit filename="Logic/ApplicationLogic.cpp" />
-		<Unit filename="Logic/ApplicationLogic.h" />
-		<Unit filename="Renderer/FreeCamera.cpp" />
-		<Unit filename="Renderer/FreeCamera.h" />
-		<Unit filename="Renderer/OpenGL/MatrixStack.cpp" />
-		<Unit filename="Renderer/OpenGL/MatrixStack.h" />
-		<Unit filename="Renderer/OpenGL/Pipeline.cpp" />
-		<Unit filename="Renderer/OpenGL/Pipeline.h" />
-		<Unit filename="Renderer/OpenGL/Shader.cpp" />
-		<Unit filename="Renderer/OpenGL/Shader.h" />
-		<Unit filename="Renderer/Renderer.cpp" />
-		<Unit filename="Renderer/Renderer.h" />
-		<Unit filename="Renderer/Terrain.cpp" />
-		<Unit filename="Renderer/Terrain.h" />
-		<Unit filename="Renderer/Types.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="src/Common/Data.cpp" />
+		<Unit filename="src/Common/Data.h" />
+		<Unit filename="src/Common/File.cpp" />
+		<Unit filename="src/Common/File.h" />
+		<Unit filename="src/GUI/Window.cpp" />
+		<Unit filename="src/GUI/Window.h" />
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/Game.h" />
+		<Unit filename="src/Input/InputManager.cpp" />
+		<Unit filename="src/Input/InputManager.h" />
+		<Unit filename="src/Input/Keyboard.cpp" />
+		<Unit filename="src/Input/Keyboard.h" />
+		<Unit filename="src/Input/Mouse.cpp" />
+		<Unit filename="src/Input/Mouse.h" />
+		<Unit filename="src/Logic/ApplicationLogic.cpp" />
+		<Unit filename="src/Logic/ApplicationLogic.h" />
+		<Unit filename="src/Renderer/FreeCamera.cpp" />
+		<Unit filename="src/Renderer/FreeCamera.h" />
+		<Unit filename="src/Renderer/OpenGL/MatrixStack.cpp" />
+		<Unit filename="src/Renderer/OpenGL/MatrixStack.h" />
+		<Unit filename="src/Renderer/OpenGL/Pipeline.cpp" />
+		<Unit filename="src/Renderer/OpenGL/Pipeline.h" />
+		<Unit filename="src/Renderer/OpenGL/Shader.cpp" />
+		<Unit filename="src/Renderer/OpenGL/Shader.h" />
+		<Unit filename="src/Renderer/Renderer.cpp" />
+		<Unit filename="src/Renderer/Renderer.h" />
+		<Unit filename="src/Renderer/Terrain.cpp" />
+		<Unit filename="src/Renderer/Terrain.h" />
+		<Unit filename="src/Renderer/Types.h" />
+		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
